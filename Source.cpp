@@ -11,8 +11,8 @@ int main(){
     cout << "HWND Not found\n\n\n";
   } else {
     DWORD procID;
-		GetWindowThreadProcessId(hwnd, &procID);
-		HANDLE handle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, procID);
+    GetWindowThreadProcessId(hwnd, &procID);
+    HANDLE handle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, procID);
     if(procID == NULL){
       cout << "Cannot find process ID\n\n\n";
     } else {
